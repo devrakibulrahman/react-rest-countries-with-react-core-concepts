@@ -1,10 +1,12 @@
 import './App.css';
+import Countries from './components/countries/Countries.jsx';
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h2>React World Tour</h2>
+      <Countries></Countries>
     </>
   );
 };
