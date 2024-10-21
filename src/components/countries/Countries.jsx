@@ -4,17 +4,22 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 
 const Countries = () => {
-    const [country, setCountry] = useState([]);
+    const [countries, setCountries] = useState([]);
 
     useEffect(() => {
         fetch('https://restcountries.com/v3.1/all')
             .then((res) => res.json())
-            .then((data) => console.log(data))
+            .then((data) => setCountries(data))
     }, []);
 
     return (
         <div>
-            <Country></Country>
+            <h3>Total Countries : {countries.length}</h3>
+            <div className='countries-card-container'>
+                {
+                    countries.map((country) => <Country key={country.ccn3} country={country}/>)
+                }
+            </div>
         </div>
     );
 };
