@@ -4,9 +4,19 @@ import './Country.css';
 const Country = ({country, handleAddVisitedList}) => {
 
     const [isVisited, setVisited] = useState(false);
+    const [isAddVisited, setAddVisited] = useState(false);
 
     const handleVisited = () => {
         setVisited(!isVisited);
+    };
+
+    const handleAddVisited = () => {
+        setAddVisited(true);
+    };
+
+    const handleAddVisitedListBtn = (countryData) => {
+        handleAddVisitedList(countryData);
+        handleAddVisited();
     };
 
     return (
@@ -20,7 +30,7 @@ const Country = ({country, handleAddVisitedList}) => {
             <p>Country Region : {country?.region}</p>
             <div className='btn-bx'>
                 <button onClick={handleVisited} className={isVisited && 'activeBtn'}>{isVisited ? 'Visited' : 'Visit'}</button>
-                <button onClick={() => handleAddVisitedList(country)} className={isVisited && 'activeBtn'}>Add Visited List</button>
+                <button onClick={() => handleAddVisitedListBtn(country)} className={isAddVisited && 'activeBtn'}>Add Visited List</button>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import './Visited.css';
 
 const Visited = ({country}) => {
-    console.log(country)
+    
     return (
         <div className='visited-card'>
             <p style={{
