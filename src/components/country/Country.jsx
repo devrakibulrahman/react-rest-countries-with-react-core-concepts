@@ -19,8 +19,8 @@ const Country = ({country, handleAddVisitedList}) => {
             <p>Country Code : {country?.cca3}</p>
             <p>Country Region : {country?.region}</p>
             <div className='btn-bx'>
-                <button onClick={handleVisited}>{isVisited ? 'Visited' : 'Visit'}</button>
-                <button onClick={() => handleAddVisitedList(country)}>Add Visited List</button>
+                <button onClick={handleVisited} className={isVisited && 'activeBtn'}>{isVisited ? 'Visited' : 'Visit'}</button>
+                <button onClick={() => handleAddVisitedList(country)} className={isVisited && 'activeBtn'}>Add Visited List</button>
             </div>
         </div>
     );

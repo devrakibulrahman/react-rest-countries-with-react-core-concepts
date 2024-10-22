@@ -2,7 +2,7 @@
   width: 120px;
   height: 118px;
   display: block;
-  border: 1px solid #008000;
+  border: 2px solid green;
   padding: 0.5rem;
   border-radius: 8px;
 }
@@ -10,7 +10,6 @@
 .visited-card .img-box {
   width: 100%;
   height: 70px;
-  background-color: aqua;
 }
 
 .visited-card .img-box .visited-img {

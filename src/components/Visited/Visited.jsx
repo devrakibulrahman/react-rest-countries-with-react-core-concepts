@@ -9,7 +9,7 @@ const Visited = ({country}) => {
                 margin: '0 0 8px 0'
             }}>Country Name : {country?.name?.common}</p>
             <div className='img-box'>
-                <img className='visited-img' src={country?.flags?.png} alt="" />
+                <img className='visited-img' src={country?.flags?.png}/>
             </div>
         </div>
     );
